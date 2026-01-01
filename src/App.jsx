@@ -1,9 +1,12 @@
 import React from 'react'
+import HomePage from './pages/HomePage'
 
 const App = () => {
   return (
-    <div className='text-5xl font-bold text-white min-h-screen flex items-center justify-center bg-black'>
-      Hello Portfolio
+    <div className='bg-[#0B0D0E] text-zinc-50'>
+      <div className='mx-auto max-w-2xl'>
+        <HomePage />
+      </div>
     </div>
   )
 }
