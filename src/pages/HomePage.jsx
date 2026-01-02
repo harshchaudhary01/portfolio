@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoLocationOutline } from "react-icons/io5";
 import { BiStopwatch } from "react-icons/bi";
 import { IoIosRocket } from "react-icons/io";
@@ -9,34 +9,36 @@ import { SiLeetcode } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
 import { BiSolidMessageDetail } from "react-icons/bi";
+import CornerBorder from '../components/CornerBorder';
+// import GithubContribution from '../components/GithubContribution';
 
 const TimeDisplay = () => {
-  const [time, setTime] = useState('');
+    const [time, setTime] = useState('');
 
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const hours = now.getHours();
-      const minutes = now.getMinutes().toString().padStart(2, '0');
-      const seconds = now.getSeconds().toString().padStart(2, '0');
-      const milliseconds = now.getMilliseconds().toString().padStart(3, '0');
+    useEffect(() => {
+        const updateTime = () => {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const milliseconds = now.getMilliseconds().toString().padStart(3, '0');
 
-      const period = hours >= 12 ? 'PM' : 'AM';
-      const formattedHours = hours % 12 || 12;
+            const period = hours >= 12 ? 'PM' : 'AM';
+            const formattedHours = hours % 12 || 12;
 
-      setTime(`${formattedHours}:${minutes}:${seconds}:${milliseconds} ${period}`);
-    };
+            setTime(`${formattedHours}:${minutes}:${seconds}:${milliseconds} ${period}`);
+        };
 
-    const interval = setInterval(updateTime, 100);
-    return () => clearInterval(interval);
-  }, []);
+        const interval = setInterval(updateTime, 100);
+        return () => clearInterval(interval);
+    }, []);
 
-  return <div>{time}</div>;
+    return <div>{time}</div>;
 };
 
 const HomePage = () => {
     return (
-        <div className='min-h-screen px-5 py-12 '>
+        <div className='px-5'>
             {/* Profile_Section */}
             <div className='flex items-center justify-between'>
                 <div>
@@ -130,7 +132,6 @@ const HomePage = () => {
                     <FaFileDownload />
                 </button>
             </div>
-
         </div>
     )
 }
