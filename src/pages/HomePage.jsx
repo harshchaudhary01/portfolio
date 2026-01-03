@@ -10,6 +10,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import CornerBorder from '../components/CornerBorder';
+import CalBooking from '../components/CalBooking';
 // import GithubContribution from '../components/GithubContribution';
 
 const TimeDisplay = () => {
@@ -61,7 +62,7 @@ const HomePage = () => {
                 </div>
                 <div className='relative'>
                     <img className='h-27 w-27 rounded' src="src\assets\profile_picture.png" alt="profile_picture" />
-                    <img className='h-30 w-40 rounded absolute top-0' src="src\assets\cyber_katana.png" alt="Cyber_katana" />
+                    <img className='h-30 w-40 rounded absolute top-0' src="src\assets\flower.png" alt="flower" />
                 </div>
             </div>
 
@@ -110,25 +111,28 @@ const HomePage = () => {
                 <span> mostly.</span>
             </div>
 
+            {/* Cal.com Booking Meeting */}
+            <CalBooking />
+
             {/* Social Media Handles */}
             <div className='flex items-center gap-4 mt-5'>
-                <button className='inline-flex items-center px-2 py-1 border border-dashed border-gray-500 rounded-md bg-[#2F2F2F] gap-1 text-white text-xs'>
+                <button className='button inline-flex items-center'>
                     <BiSolidMessageDetail />
                     <p>LinkedIn DM</p>
                 </button>
                 <span className='text-xs rotate-340'>OR</span>
-                <button className='inline-flex items-center gap-1 px-2 py-1 border border-dashed border-gray-500 rounded-md bg-[#2F2F2F] text-white text-xs'>
+                <button className='button inline-flex items-center'>
                     <MdMarkEmailUnread />
                     <p>Email Me</p>
                 </button>
                 <span>|</span>
-                <button className='inline-flex items-center gap-1 px-2 py-2 border border-dashed border-gray-500 rounded-md bg-[#2F2F2F] text-white text-xs'>
+                <button className='button inline-flex items-center'>
                     <SiLeetcode />
                 </button>
-                <button className='inline-flex items-center gap-1 px-2 py-2 border border-dashed border-gray-500 rounded-md bg-[#2F2F2F] text-white text-xs'>
+                <button className='button inline-flex items-center'>
                     <BsGithub />
                 </button>
-                <button className='inline-flex items-center gap-1 px-2 py-2 border border-dashed border-gray-500 rounded-md bg-[#2F2F2F] text-white text-xs'>
+                <button className='button inline-flex items-center'>
                     <FaFileDownload />
                 </button>
             </div>
