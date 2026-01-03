@@ -7,7 +7,7 @@ export default function CalBooking() {
       cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
     })();
   }, [])
-  return <button data-cal-namespace="15min"
+  return <button className="button" data-cal-namespace="15min"
     data-cal-link="harshchaudhary/15min"
     
     data-cal-config='{"layout":"month_view"}'
