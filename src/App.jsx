@@ -7,6 +7,7 @@ import GithubContribution from './components/GithubContribution'
 
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
+import MeetingBooking from './pages/MeetingBooking'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <HomePage />
         <GithubContribution />
         <ProjectPage />
+        <MeetingBooking />
         <ThoughtsPage />
         <ConnectPage />
       </div>

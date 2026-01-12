@@ -64,7 +64,7 @@
 .button {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.40rem;
   background-image: linear-gradient(to bottom, #1f1f1f, #0d0d0d);
@@ -82,4 +82,36 @@
 
 .button:active {
   transform: scale(0.95);
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 260px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-style: italic;
+
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }

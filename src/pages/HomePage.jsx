@@ -10,7 +10,6 @@ import { BsGithub } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import CornerBorder from '../components/CornerBorder';
-import CalBooking from '../components/CalBooking';
 // import GithubContribution from '../components/GithubContribution';
 
 const TimeDisplay = () => {
@@ -110,9 +109,6 @@ const HomePage = () => {
                 </div>
                 <span> mostly.</span>
             </div>
-
-            {/* Cal.com Booking Meeting */}
-            <CalBooking />
 
             {/* Social Media Handles */}
             <div className='flex items-center gap-4 mt-5'>
