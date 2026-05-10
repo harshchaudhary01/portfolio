@@ -13,6 +13,18 @@ import CornerBorder from '../components/CornerBorder';
 import CalBooking from '../components/CalBooking';
 // import GithubContribution from '../components/GithubContribution';
 
+import profilePicture from '../assets/profile_picture.png';
+import candlelightDark from '../assets/candlelight_dark.png';
+import flower from '../assets/flower.png';
+import cyberKatana from '../assets/cyber_katana.png';
+import soulLeaving from '../assets/soul_leaving_body_sunday.png';
+import shyHeart from '../assets/shy-heart.png';
+import reactSvg from '../assets/react.svg';
+import typescriptSvg from '../assets/typescript.svg';
+import nextJsSvg from '../assets/next-js.svg';
+import mongoDbSvg from '../assets/MongoDB.svg';
+import mysqlSvg from '../assets/mysql.svg';
+
 const TimeDisplay = () => {
     const [time, setTime] = useState('');
 
@@ -38,11 +50,11 @@ const TimeDisplay = () => {
 };
 
 const profileDecoration = [
-  "src/assets/candlelight_dark.png",
-  "src/assets/flower.png",
-  "src/assets/cyber_katana.png",
-  "src/assets/soul_leaving_body_sunday.png",
-  "src/assets/shy-heart.png",
+  candlelightDark,
+  flower,
+  cyberKatana,
+  soulLeaving,
+  shyHeart,
 ];
 
 
@@ -79,7 +91,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className='relative'>
-                    <img className='h-27 w-27 rounded' src="src\assets\profile_picture.png" alt="profile_picture" />
+                    <img className='h-27 w-27 rounded' src={profilePicture} alt="profile_picture" />
                     <img
                         onContextMenu={(e) => e.preventDefault()}
                         className='h-30 w-40 rounded absolute top-0 transition-opacity duration-500'
@@ -90,7 +102,7 @@ const HomePage = () => {
 
             {/* Profile_Content */}
             <div className='flex items-center button w-35'>
-                <img className='w-4 h-4 rounded-full' src="src\assets\profile_picture.png" alt="" />
+                <img className='w-4 h-4 rounded-full' src={profilePicture} alt="" />
                 <CalBooking text={"Book a Free Call"} />
             </div>
             <div className='text-[#8C8C8C] mt-6 leading-8'>
@@ -100,32 +112,32 @@ const HomePage = () => {
                 <span className='text-white'>I</span>
                 <span> love building solutions and solving problems. I enjoy crafting websites with </span>
                 <div className="items-baseline inline-flex  gap-1 text-white text-md">
-                    <img className='h-5 w-5' src="src\assets\react.svg" alt="" />
+                    <img className='h-5 w-5' src={reactSvg} alt="" />
                     <p>React</p>
                 </div>
                 <span>, </span>
 
                 <div className="items-baseline inline-flex  gap-1 text-white text-md">
-                    <img className='h-5 w-5' src="src\assets\typescript.svg" alt="" />
+                    <img className='h-5 w-5' src={typescriptSvg} alt="" />
                     <p>Typescript</p>
                 </div>
 
                 <span>, </span>
 
                 <div className="items-baseline inline-flex  gap-1 text-white text-md">
-                    <img className='h-5 w-5' src="src\assets\next-js.svg" alt="" />
+                    <img className='h-5 w-5' src={nextJsSvg} alt="" />
                     <p>Next.js</p>
                 </div>
 
                 <span>, </span>
                 <div className="items-baseline inline-flex  gap-1 text-white text-md">
-                    <img className='h-5 w-5' src="src\assets\MongoDB.svg" alt="" />
+                    <img className='h-5 w-5' src={mongoDbSvg} alt="" />
                     <p>MongoDB</p>
                 </div>
                 <span>, </span>
 
                 <div className="items-baseline inline-flex  gap-1 text-white text-md">
-                    <img className='h-5 w-5' src="src\assets\mysql.svg" alt="" />
+                    <img className='h-5 w-5' src={mysqlSvg} alt="" />
                     <p>MySQL</p>
                 </div>
 
