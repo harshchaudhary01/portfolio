@@ -9,9 +9,8 @@ const ConnectPage = () => {
   return (
       <div className='px-5 mt-8 text-center'>
       <div className='mt-2 p-5 border border-dashed border-gray-500 rounded-md text-center'>
-        <h1 className='text-2xl font-medium'>Let's Connect</h1>
-        <p className='mt-1 text-sm'>Feel free to reach out through any of these platforms</p>
-        <div className='flex justify-evenly px-25 gap-3 mt-3'>
+        <h1 className='text-2xl font-medium text-[#828282] '>Hey, you scrolled this far, let's Connect!</h1>
+        <div className='flex justify-evenly px-25 gap-3 mt-8'>
             <button className='button'>
                 <SiLeetcode />
                 <p>Leetcode</p>

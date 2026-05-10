@@ -115,3 +115,33 @@
   visibility: visible;
   opacity: 1;
 }
+
+
+
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+

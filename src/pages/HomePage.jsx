@@ -10,6 +10,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import CornerBorder from '../components/CornerBorder';
+import CalBooking from '../components/CalBooking';
 // import GithubContribution from '../components/GithubContribution';
 
 const TimeDisplay = () => {
@@ -36,7 +37,25 @@ const TimeDisplay = () => {
     return <div>{time}</div>;
 };
 
+const profileDecoration = [
+  "src/assets/candlelight_dark.png",
+  "src/assets/flower.png",
+  "src/assets/cyber_katana.png",
+  "src/assets/soul_leaving_body_sunday.png",
+  "src/assets/shy-heart.png",
+];
+
+
 const HomePage = () => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % profileDecoration.length);
+        },  10 * 1000); // 10 seconds
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className='px-5'>
             {/* Profile_Section */}
@@ -61,11 +80,19 @@ const HomePage = () => {
                 </div>
                 <div className='relative'>
                     <img className='h-27 w-27 rounded' src="src\assets\profile_picture.png" alt="profile_picture" />
-                    <img className='h-30 w-40 rounded absolute top-0' src="src\assets\flower.png" alt="flower" />
+                    <img
+                        onContextMenu={(e) => e.preventDefault()}
+                        className='h-30 w-40 rounded absolute top-0 transition-opacity duration-500'
+                        src={profileDecoration[currentImageIndex]}
+                        alt="profile_decoration" />
                 </div>
             </div>
 
             {/* Profile_Content */}
+            <div className='flex items-center button w-35'>
+                <img className='w-4 h-4 rounded-full' src="src\assets\profile_picture.png" alt="" />
+                <CalBooking text={"Book a Free Call"} />
+            </div>
             <div className='text-[#8C8C8C] mt-6 leading-8'>
                 <span>Yup! I'm a </span>
                 <span className='text-white'>Full Stack Developer</span>
